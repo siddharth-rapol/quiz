@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -105,9 +104,9 @@
             { question: "This is a <u>depressing</u> time to be living in London as people are arguing over the election.", options: ["Interjection", "Adjective", "Adverb", "Noun"], answer: 1 },
             { question: "Take your first left then go <u>over</u> the bridge.", options: ["Noun", "Preposition", "Verb", "Interjection"], answer: 1 },
             { question: "There is a party next week <u>though</u> I don’t think I can go.", options: ["Preposition", "Conjunction", "Adverb", "Noun"], answer: 1 },
-            { question: "He thinks we will arrive at <u>roughly</u> 5pm.", options: ["Pronoun", "Preposition", "Conjunction", "Verb"], answer: 1 },
-            { question: "The music is <u>very</u> loud.", options: ["Adjective", "Interjection", "Preposition", "Noun"], answer: 0 },
-            { question: "He goes to Spain often not only for the sun but also for the <u>food</u>.", options: ["Conjunction", "Adverb", "Preposition", "Noun"], answer: 2 },
+            { question: "He thinks we will arrive at <u>roughly</u> 5pm.", options: ["Pronoun", "Preposition", "Conjunction", "Adverb"], answer: 3 },
+            { question: "The music is <u>very</u> loud.", options: ["Adjective", "Interjection", "Preposition", "Adverb"], answer: 3 },
+            { question: "He goes to Spain often not only for the sun but also for the <u>food</u>.", options: ["Conjunction", "Adverb", "Preposition", "Noun"], answer: 3 },
             { question: "Because the floor had just been mopped, Allan and Elaine slipped and fell as they ran to the meeting.", options: ["Preposition", "Conjunction", "Noun", "Adjective"], answer: 1 },
             { question: "I visited the Golden Temple in Amritsar, India in the vacation.", options: ["Noun", "Interjection", "Pronoun", "Conjunction"], answer: 0 },
             { question: "Her expensive brown English antique new watch stopped working.", options: ["Conjunction", "Adverb", "Pronoun", "Noun"], answer: 3 },
@@ -149,8 +148,6 @@
 
             if (selected === correctAnswer) {
                 button.classList.add('correct');
-                const sound = new Audio('correct.mp3');
-                sound.play();
                 setTimeout(() => {
                     currentQuestionIndex++;
                     if (currentQuestionIndex < questions.length) {
@@ -161,11 +158,8 @@
                 }, 1000);
             } else {
                 button.classList.add('wrong');
-                const sound = new Audio('wrong.mp3');
-                sound.play();
             }
         }
     </script>
 </body>
 </html>
-
