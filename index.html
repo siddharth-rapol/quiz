@@ -113,15 +113,15 @@
             { question: "The music is <u>very</u> loud.", options: ["Adjective", "Interjection", "Preposition", "Adverb"], answer: 3 },
             { question: "He goes to Spain often not only for the sun but also for the <u>food</u>.", options: ["Conjunction", "Adverb", "Preposition", "Noun"], answer: 3 },
             { question: "Because the floor had just been mopped, Allan and Elaine slipped and fell as they ran to the meeting.", options: ["Preposition", "Conjunction", "Noun", "Adjective"], answer: 1 },
-            { question: "I visited the Golden Temple in Amritsar, India in the vacation.", options: ["Noun", "Interjection", "Pronoun", "Conjunction"], answer: 0 },
-            { question: "Her expensive brown English antique new watch stopped working.", options: ["Conjunction", "Adverb", "Pronoun", "Noun"], answer: 3 },
-            { question: "My mother is cooking dinner for us.", options: ["Preposition", "Verb", "Noun", "Adverb"], answer: 1 },
+            { question: "I visited the <u>Golden Temple</u> in Amritsar, India in the vacation.", options: ["Noun", "Interjection", "Pronoun", "Conjunction"], answer: 0 },
+            { question: "Her expensive brown English antique new <u>watch</u> stopped working.", options: ["Conjunction", "Adverb", "Pronoun", "Noun"], answer: 3 },
+            { question: "My mother is <u>cooking</u> dinner for us.", options: ["Preposition", "Verb", "Noun", "Adverb"], answer: 1 },
             { question: "<u>Oh</u>, I didn’t see you there!", options: ["Preposition", "Conjunction", "Noun", "Interjection"], answer: 3 },
-            { question: "He's the richest man in the world.", options: ["Adjective", "Verb", "Conjunction", "Preposition"], answer: 0 },
-            { question: "Although we were tired, we stayed up late.", options: ["Preposition", "Conjunction", "Noun", "Interjection"], answer: 1 },
-            { question: "Poverty is a global problem.", options: ["Adjective", "Interjection", "Preposition", "Noun"], answer: 3 },
-            { question: "He has many influential friends.", options: ["Conjunction", "Verb", "Preposition", "Noun"], answer: 3 },
-            { question: "Hari is the most intelligent boy in the class.", options: ["Pronoun", "Preposition", "Conjunction", "Adjective"], answer: 3 }
+            { question: "He's the <u>richest</u> man in the world.", options: ["Adjective", "Verb", "Conjunction", "Preposition"], answer: 0 },
+            { question: "<u>Although</u> we were tired, we stayed up late.", options: ["Preposition", "Conjunction", "Noun", "Interjection"], answer: 1 },
+            { question: "<u>Poverty</u> is a global problem.", options: ["Adjective", "Interjection", "Preposition", "Noun"], answer: 3 },
+            { question: "He has many <u>influential</u> friends.", options: ["Conjunction", "Verb", "Preposition", "Noun"], answer: 3 },
+            { question: "Hari is the most <u>intelligent</u> boy in the class.", options: ["Pronoun", "Preposition", "Conjunction", "Adjective"], answer: 3 }
         ];
 
         let currentQuestionIndex = 0;
@@ -156,7 +156,7 @@
             if (selected === correctAnswer) {
                 button.classList.add('correct');
                 playSound('correct.mp3');
-                resultElement.innerHTML = "Correct!"; 
+                resultElement.innerHTML = "Correct!";
             } else {
                 button.classList.add('wrong');
                 playSound('wrong.mp3');
@@ -179,4 +179,4 @@
         }
     </script>
 </body>
-</html>   
+</html>
