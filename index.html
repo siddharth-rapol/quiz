@@ -157,20 +157,19 @@
                 button.classList.add('correct');
                 playSound('correct.mp3');
                 resultElement.innerHTML = "Correct!";
+                setTimeout(() => {
+                    currentQuestionIndex++;
+                    if (currentQuestionIndex < questions.length) {
+                        showQuestion();
+                    } else {
+                        quizContainer.innerHTML = '<p>Quiz Completed! Well done!</p>';
+                    }
+                }, 2000);
             } else {
                 button.classList.add('wrong');
                 playSound('wrong.mp3');
-                resultElement.innerHTML = "Wrong! The correct answer was: " + questions[currentQuestionIndex].options[correctAnswer];
+                resultElement.innerHTML = "Wrong! Try again.";
             }
-
-            setTimeout(() => {
-                currentQuestionIndex++;
-                if (currentQuestionIndex < questions.length) {
-                    showQuestion();
-                } else {
-                    quizContainer.innerHTML = '<p>Quiz Completed! Well done!</p>';
-                }
-            }, 2000);
         }
 
         function playSound(file) {
